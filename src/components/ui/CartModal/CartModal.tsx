@@ -22,6 +22,14 @@ export const CartModal: FC<Props> = ({ handleShowCartModal }) => {
     dispatch({ type: 'ADD_TO_CART', payload: item });
   };
 
+  const totalPay = () => {
+    const total = cartItems.reduce((acc, item) => {
+      return acc + item.price * item.quantity;
+    }, 0);
+
+    return total;
+  };
+
   return (
     <div className={styles.modalContainer}>
       <button className={styles.modalCloseButton} onClick={handleShowCartModal}>
@@ -56,7 +64,7 @@ export const CartModal: FC<Props> = ({ handleShowCartModal }) => {
               <td>
                 <button
                   className={styles.modalButtonAdd}
-                  onClick={() => removeToCart(item)}
+                  onClick={() => addToCart(item)}
                 >
                   +1
                 </button>
@@ -66,7 +74,7 @@ export const CartModal: FC<Props> = ({ handleShowCartModal }) => {
         </tbody>
       </table>
       <div className={styles.modalTotalContainer}>
-        <h3>Total: 400,00</h3>
+        <h3>${totalPay()}</h3>
       </div>
       <div className={styles.modalButtonContainer}>
         <button>Checkout</button>
