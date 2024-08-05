@@ -1,3 +1,4 @@
+import { CardCredit } from '../../components/ui/CardCredit/CardCredit';
 import { Table } from '../../components/ui/Table/Table';
 import styles from './Checkout.module.css';
 
@@ -6,11 +7,14 @@ const Checkout = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Checkout</h1>
       <div className={styles.grid}>
-        <div>
+        <div className={styles.tableContainer}>
           <Table />
         </div>
-        <div>{/* Formulario tarjeta */}</div>
+        <div>
+          <CardCredit />
+        </div>
       </div>
+      <button className={styles.buyButton}>Buy now</button>
     </div>
   );
 };
