@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 50px;
   gap: 10px;
 }
 .paginationActive {
@@ -45,4 +46,12 @@
   text-transform: uppercase;
   transition: 0.5s ease-in-out;
   width: 160px;
+}
+
+.paginationButton:disabled,
+.paginationButton[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: auto;
 }

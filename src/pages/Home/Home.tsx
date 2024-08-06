@@ -28,14 +28,19 @@ const Home = () => {
           ))}
         </div>
       }
-      <div>
-        <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+      <div className={styles.paginationContainer}>
+        <button
+          onClick={() => setPage(page - 1)}
+          disabled={page === 1}
+          className={styles.paginationButton}
+        >
           previous page
         </button>
-        <div>
+        <div className={styles.paginationActive}>
           <span>{page}</span>
         </div>
         <button
+          className={styles.paginationButton}
           onClick={() => setPage(page + 1)}
           disabled={data?.length === page}
         >
