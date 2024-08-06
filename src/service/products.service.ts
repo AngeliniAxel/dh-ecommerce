@@ -8,7 +8,6 @@ export const getProducts = async (page = 0): Promise<Product[]> => {
 
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       return data.data;
     } else {
       throw new Error('Failed to fetch products');
