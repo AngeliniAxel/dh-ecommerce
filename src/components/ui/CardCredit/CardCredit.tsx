@@ -53,6 +53,7 @@ export const CardCredit = () => {
     });
 
     dispatch({ type: 'CLEAR_CART', payload: {} as CartProduct });
+    toast.success('Thank you for your purchase');
   };
 
   return (
