@@ -3,6 +3,8 @@ import 'react-credit-cards-2/dist/es/styles-compiled.css';
 import styles from './CardCredit.module.css';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import useCartContext from '../../../hooks/useCartContext';
+import { CartProduct } from '../../../interface';
 
 export const CardCredit = () => {
   const [cardData, setCardData] = useState({
@@ -12,6 +14,8 @@ export const CardCredit = () => {
     cvc: '',
     focus: '',
   });
+
+  const { dispatch } = useCartContext();
 
   const { number, name, expiry, cvc } = cardData;
 
@@ -47,6 +51,8 @@ export const CardCredit = () => {
       cvc: '',
       focus: '',
     });
+
+    dispatch({ type: 'CLEAR_CART', payload: {} as CartProduct });
   };
 
   return (
