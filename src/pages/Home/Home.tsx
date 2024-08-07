@@ -42,7 +42,7 @@ const Home = () => {
         <button
           className={styles.paginationButton}
           onClick={() => setPage(page + 1)}
-          disabled={data?.length === page}
+          disabled={data?.length === page + 1}
         >
           next page
         </button>
