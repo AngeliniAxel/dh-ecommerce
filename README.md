@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# Frontend Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Just a simple frontend Ecommerce using a json database.
 
-Currently, two official plugins are available:
+This is a project from a course that I'm doing from digitalhouse.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Although it is pretty simple, it's good to improve the basics and learn about good practices.
 
-## Expanding the ESLint configuration
+## Tecnologías
+Este proyecto utiliza las siguientes tecnologías principales:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+React.js
+React Credit Cards 2
+React Router Dom
+Sonner
+React Query
